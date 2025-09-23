@@ -1,0 +1,72 @@
+.logoutPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--neutral-cream) 0%, #fef9e7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+}
+
+.logoutCard {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  max-width: 400px;
+  width: 100%;
+}
+
+.logoutIcon {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+}
+
+.logoutTitle {
+  color: var(--primary-earth);
+  margin-bottom: var(--space-md);
+}
+
+.logoutText {
+  color: var(--neutral-gray);
+  margin-bottom: var(--space-xl);
+  line-height: 1.6;
+}
+
+.logoutButtons {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.confirmButton {
+  background: var(--primary-nature);
+  color: var(--neutral-white);
+  border: none;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.confirmButton:hover {
+  background: var(--primary-earth);
+  transform: translateY(-1px);
+}
+
+.cancelButton {
+  background: transparent;
+  border: 2px solid var(--neutral-gray);
+  color: var(--neutral-gray);
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.cancelButton:hover {
+  background: var(--neutral-gray);
+  color: var(--neutral-white);
+}

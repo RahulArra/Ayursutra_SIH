@@ -1,0 +1,343 @@
+.progressPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--neutral-cream) 0%, #fef9e7 100%);
+  padding: var(--space-xl) 0;
+}
+
+.pageTitle {
+  color: var(--primary-earth);
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  font-weight: 700;
+}
+
+.progressGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Chart Card */
+.chartCard {
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(46, 139, 87, 0.2);
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.chartCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-nature), #10b981);
+}
+
+.chartContainer {
+  height: 100%;
+  position: relative;
+}
+
+/* Stats Cards */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.statCard {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.statIcon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.statValue {
+  color: var(--primary-earth);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.statLabel {
+  color: var(--neutral-gray);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Progress Summary */
+.progressSummary {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.summaryIcon {
+  font-size: 1.8rem;
+  color: var(--primary-nature);
+}
+
+.summaryTitle {
+  color: var(--primary-earth);
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.progressBar {
+  height: 8px;
+  background: var(--neutral-cream);
+  border-radius: var(--radius-full);
+  margin: var(--space-lg) 0;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-nature), #10b981);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease-in-out;
+}
+
+.milestone {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--neutral-cream);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  border-left: 4px solid var(--primary-warmth);
+}
+
+.milestone:last-child {
+  margin-bottom: 0;
+}
+
+.milestoneIcon {
+  font-size: 1.5rem;
+}
+
+.milestoneText {
+  flex: 1;
+  color: var(--neutral-dark);
+}
+
+.milestoneDate {
+  color: var(--neutral-gray);
+  font-size: 0.9rem;
+}
+
+/* Wellness Tips */
+.wellnessTips {
+  background: linear-gradient(135deg, var(--primary-earth) 0%, #5a3921 100%);
+  color: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.wellnessTips::before {
+  content: '🌿';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 8rem;
+  opacity: 0.1;
+  transform: rotate(25deg);
+}
+
+.tipsTitle {
+  color: var(--neutral-white);
+  margin-bottom: var(--space-md);
+  font-size: 1.3rem;
+}
+
+.tipItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  opacity: 0.9;
+}
+
+.tipItem:last-child {
+  margin-bottom: 0;
+}
+
+.tipIcon {
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+/* Weekly Comparison */
+.comparisonCard {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.comparisonHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.comparisonIcon {
+  font-size: 1.8rem;
+  color: var(--primary-warmth);
+}
+
+.comparisonTitle {
+  color: var(--primary-earth);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.comparisonValue {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin: var(--space-lg) 0;
+  color: var(--primary-nature);
+}
+
+.positive {
+  color: #10b981;
+}
+
+.negative {
+  color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .progressGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+    margin-bottom: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .progressPage {
+    padding: var(--space-md) 0;
+  }
+  
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chartCard {
+    padding: var(--space-lg);
+    height: 300px;
+  }
+  
+  .progressSummary,
+  .wellnessTips,
+  .comparisonCard {
+    padding: var(--space-lg);
+  }
+}
+
+/* Chart customizations */
+:global(.chart-legend) {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-md);
+}
+
+:global(.chart-legend span) {
+  background: var(--primary-nature) !important;
+  border-color: var(--primary-earth) !important;
+}
+
+/* Animation for progress elements */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.statCard {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.statCard:nth-child(1) { animation-delay: 0.1s; }
+.statCard:nth-child(2) { animation-delay: 0.2s; }
+.statCard:nth-child(3) { animation-delay: 0.3s; }
+
+/* Empty state for when no data */
+.emptyState {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--neutral-gray);
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: var(--space-md);
+  opacity: 0.5;
+}

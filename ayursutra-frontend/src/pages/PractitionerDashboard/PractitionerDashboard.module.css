@@ -1,0 +1,104 @@
+.practitionerPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--neutral-cream) 0%, #fef9e7 100%);
+  padding: var(--space-xl) 0;
+}
+
+.pageTitle {
+  color: var(--primary-earth);
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  font-weight: 700;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto var(--space-2xl);
+  padding: 0 var(--space-md);
+}
+
+.statCard {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.statIcon {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.statValue {
+  color: var(--primary-earth);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.statLabel {
+  color: var(--neutral-gray);
+  font-size: 1rem;
+}
+
+.patientsList {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-sm);
+}
+
+.patientsTitle {
+  color: var(--primary-earth);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.patientItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg);
+  margin-bottom: var(--space-md);
+  background: var(--neutral-cream);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--primary-nature);
+}
+
+.patientInfo {
+  flex: 1;
+}
+
+.patientName {
+  color: var(--primary-earth);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.patientDetails {
+  color: var(--neutral-gray);
+  font-size: 0.9rem;
+}
+
+.viewButton {
+  background: var(--primary-nature);
+  color: var(--neutral-white);
+  border: none;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.viewButton:hover {
+  background: var(--primary-earth);
+  transform: translateY(-1px);
+}

@@ -1,0 +1,156 @@
+.authContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--neutral-cream) 0%, #fef9e7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-xl);
+}
+
+.authCard {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid rgba(139, 69, 19, 0.1);
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.authCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-earth), var(--primary-nature), var(--primary-warmth));
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.title {
+  color: var(--primary-earth);
+  font-size: 2.2rem;
+  margin-bottom: var(--space-sm);
+  font-weight: 700;
+}
+
+.subtitle {
+  color: var(--neutral-gray);
+  font-size: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  color: var(--primary-earth);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  padding: var(--space-md);
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--neutral-white);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-nature);
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+}
+
+.select {
+  composes: input;
+  cursor: pointer;
+}
+
+.roleSelector {
+  background: var(--neutral-cream);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--primary-warmth);
+}
+
+.roleLabel {
+  composes: label;
+  margin-bottom: var(--space-sm);
+}
+
+.loginButton {
+  composes: button from '../../components/Button/Button.module.css';
+  padding: var(--space-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: var(--space-md);
+}
+
+.loginButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Animation for the form */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.authCard {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .authContainer {
+    padding: var(--space-md);
+  }
+  
+  .authCard {
+    padding: var(--space-xl);
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Decorative elements */
+.ayurvedicIcon {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: var(--space-md);
+  color: var(--primary-nature);
+}
+
+.primary {
+  background-color: var(--primary-nature);
+  color: var(--neutral-white);
+}

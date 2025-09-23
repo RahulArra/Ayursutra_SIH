@@ -1,0 +1,11 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* Add some spacing below the nav */
+.wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--neutral-cream) 0%, #fef9e7 100%);
+}
