@@ -1,0 +1,53 @@
+export const mockSessions = [
+  {
+    id: 1,
+    title: 'John Doe - Virechana',
+    start: '2025-09-23T10:00:00',
+    end: '2025-09-23T11:30:00',
+    status: 'scheduled',
+    patientId: 101,
+    patientName: 'John Doe',
+    therapyType: 'VIRECHANA',
+    room: 'Room 101',
+    notes: 'Initial consultation completed',
+    practitionerNotes: 'Patient has reported sensitivity to certain herbs',
+    preparation: 'Complete 3-day dietary preparation',
+    contraindications: 'None reported',
+    previousSessions: 2,
+    patientCondition: 'Stable'
+  },
+  {
+    id: 2,
+    title: 'Jane Smith - Basti',
+    start: '2025-09-23T14:00:00',
+    end: '2025-09-23T15:30:00',
+    status: 'completed',
+    patientId: 102,
+    patientName: 'Jane Smith',
+    therapyType: 'BASTI',
+    room: 'Room 102',
+    notes: 'Follow-up session',
+    practitionerNotes: 'Showing good progress',
+    preparation: 'Light meal 2 hours before session',
+    contraindications: 'None',
+    previousSessions: 3,
+    patientCondition: 'Improving'
+  },
+  {
+    id: 3,
+    title: 'Mike Johnson - Nasya',
+    start: '2025-09-23T16:00:00',
+    end: '2025-09-23T16:45:00',
+    status: 'in-progress',
+    patientId: 103,
+    patientName: 'Mike Johnson',
+    therapyType: 'NASYA',
+    room: 'Room 103',
+    notes: 'Third session',
+    practitionerNotes: 'Increased duration by 15 minutes',
+    preparation: 'No food 1 hour before treatment',
+    contraindications: 'Mild sinus congestion - monitor',
+    previousSessions: 2,
+    patientCondition: 'Responding well'
+  }
+];
