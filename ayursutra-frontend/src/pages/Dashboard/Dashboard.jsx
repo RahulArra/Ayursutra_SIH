@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Dashboard.module.css";
 
 const sessions = [
@@ -15,6 +16,23 @@ const recentActivity = [
 ];
 
 export default function Dashboard() {
+  const navigate = useNavigate();
+
+  const handleBookSession = () => {
+    navigate("/book-session");
+  };
+
+  const handleContactPractitioner = () => {
+    // You can create a contact page or use a modal
+    navigate("/feedback"); // Redirect to feedback for now, or create a contact page
+  };
+
+  const handleWellnessJournal = () => {
+    // You can create a wellness journal page
+    alert("Wellness Journal feature coming soon!"); // Placeholder for now
+    // navigate("/journal"); // Uncomment when you create the journal page
+  };
+
   return (
     <div className={styles.dashboard}>
       <div className={styles.grid}>
@@ -63,13 +81,22 @@ export default function Dashboard() {
             </div>
             <div className={styles.quickActions}>
               <div className={styles.actionButtons}>
-                <button className={styles.actionButtonPrimary}>
+                <button 
+                  onClick={handleBookSession} 
+                  className={styles.actionButtonPrimary}
+                >
                   📖 Book New Session
                 </button>
-                <button className={styles.actionButtonSecondary}>
+                <button 
+                  onClick={handleContactPractitioner} 
+                  className={styles.actionButtonSecondary}
+                >
                   💬 Contact Practitioner
                 </button>
-                <button className={styles.actionButton}>
+                <button 
+                  onClick={handleWellnessJournal} 
+                  className={styles.actionButton}
+                >
                   📝 Wellness Journal
                 </button>
               </div>

@@ -63,7 +63,7 @@ export default function AuthPage() {
               onChange={(e) => setRole(e.target.value)} 
               className={styles.select}
             >
-              <option value="patient">Student/Patient</option>
+              <option value="patient">Patient</option>
               <option value="practitioner">Ayurvedic Practitioner</option>
             </select>
           </div>

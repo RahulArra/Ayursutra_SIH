@@ -1,16 +1,14 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-// Import pages
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Notifications from "./pages/Notifications/Notifications";
 import FeedbackForm from "./pages/FeedbackForm/FeedbackForm";
 import Progress from "./pages/Progress/Progress";
 import PractitionerDashboard from "./pages/PractitionerDashboard/PractitionerDashboard";
 import AuthPage from "./pages/AuthPage/AuthPage";
-import Logout from "./pages/Logout/Logout"; // Optional logout page
+import BookSession from "./pages/BookSession/BookSession"; // Add this
 
-// Import context and components
 import { AuthProvider } from "./context/AuthContext";
 import Protected from "./components/Protected/Protected";
 
@@ -20,9 +18,8 @@ export default function App() {
       <Routes>
         {/* Public routes */}
         <Route path="/auth" element={<AuthPage />} />
-        <Route path="/logout" element={<Logout />} />
 
-        {/* Patient routes */}
+        {/* Protected routes */}
         <Route
           path="/dashboard"
           element={
@@ -55,8 +52,14 @@ export default function App() {
             </Protected>
           }
         />
-
-        {/* Practitioner route */}
+        <Route
+          path="/book-session"  // Add this route
+          element={
+            <Protected>
+              <BookSession />
+            </Protected>
+          }
+        />
         <Route
           path="/practitioner"
           element={
@@ -66,7 +69,7 @@ export default function App() {
           }
         />
 
-        {/* Default redirect to auth */}
+        {/* Default redirects */}
         <Route path="/" element={<Navigate to="/auth" replace />} />
         <Route path="*" element={<Navigate to="/auth" replace />} />
       </Routes>

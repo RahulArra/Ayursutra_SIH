@@ -1,0 +1,240 @@
+.bookSessionPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--neutral-cream) 0%, #fef9e7 100%);
+  padding: var(--space-xl) 0;
+}
+
+.pageTitle {
+  color: var(--primary-earth);
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+  font-weight: 700;
+}
+
+.bookingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.bookingFormCard {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.bookingPreviewCard {
+  background: var(--neutral-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(139, 69, 19, 0.1);
+  position: sticky;
+  top: var(--space-xl);
+  height: fit-content;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--neutral-cream);
+}
+
+.cardIcon {
+  font-size: 1.5rem;
+  color: var(--primary-nature);
+}
+
+.cardTitle {
+  color: var(--primary-earth);
+  font-size: 1.4rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Form Styles */
+.formGroup {
+  margin-bottom: var(--space-lg);
+}
+
+.label {
+  color: var(--primary-earth);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  padding: var(--space-md);
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+  background-color: var(--neutral-white);
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--primary-nature);
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.1);
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Therapy Options */
+.therapyOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.therapyOption {
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background: var(--neutral-white);
+}
+
+.therapyOption:hover {
+  border-color: var(--primary-nature);
+  transform: translateY(-2px);
+}
+
+.therapyOption.selected {
+  border-color: var(--primary-nature);
+  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+}
+
+.therapyIcon {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.therapyName {
+  color: var(--primary-earth);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.therapyDesc {
+  color: var(--neutral-gray);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Date and Time Picker */
+.datetimeGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+/* Preview Styles */
+.previewItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  background: var(--neutral-cream);
+  border-radius: var(--radius-md);
+}
+
+.previewLabel {
+  color: var(--primary-earth);
+  font-weight: 600;
+}
+
+.previewValue {
+  color: var(--neutral-dark);
+}
+
+.submitButton {
+  width: 100%;
+  background: linear-gradient(135deg, var(--primary-nature), #10b981);
+  color: var(--neutral-white);
+  border: none;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: var(--space-lg);
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Success Message */
+.successMessage {
+  text-align: center;
+  padding: var(--space-2xl);
+}
+
+.successIcon {
+  font-size: 4rem;
+  margin-bottom: var(--space-lg);
+  color: var(--primary-nature);
+}
+
+.successTitle {
+  color: var(--primary-earth);
+  margin-bottom: var(--space-md);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .bookingGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .therapyOptions {
+    grid-template-columns: 1fr;
+  }
+  
+  .datetimeGroup {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .bookSessionPage {
+    padding: var(--space-md) 0;
+  }
+  
+  .bookingFormCard, .bookingPreviewCard {
+    padding: var(--space-lg);
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+}
